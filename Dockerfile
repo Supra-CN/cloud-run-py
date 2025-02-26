@@ -14,7 +14,7 @@
 FROM python:3.13.1-slim
 
 # Allow statements and log messages to immediately appear in the Cloud Run logs
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONUNBUFFERED=1
 
 # Create and change to the app directory.
 WORKDIR /usr/src/app
@@ -35,10 +35,6 @@ COPY . ./
 # to be equal to the cores available.
 # Timeout is set to 0 to disable the timeouts of the workers to allow Cloud Run to handle instance scaling.
 # CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 app:app
-
-# 暴露Gradio默认端口
-ENV PORT=$PORT
-EXPOSE $PORT
 
 # 直接启动Gradio应用
 CMD ["python", "main.py"]

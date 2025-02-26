@@ -14,7 +14,10 @@ print(f"OPENAI_API_KEY: {os.getenv('OPENAI_API_KEY')}")
 import gradio as gr
 import openai
 
-server_port = os.getenv("PORT")
+# 获取 PORT 环境变量，默认值为 7860（本地开发时使用）
+server_port = int(os.getenv("PORT", 7860))
+
+print(f"server_port: {server_port}")
 
 # 可替换为其他模型，如"gpt-4"
 load_model = 'deepseek-v3-241226'
