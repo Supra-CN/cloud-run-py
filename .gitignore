@@ -27,3 +27,7 @@ __pycache__/
 
 # macOS
 **/.DS_Store
+
+# dotenv
+.env
+.env.*
