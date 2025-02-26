@@ -15,6 +15,7 @@ import gradio as gr
 import openai
 
 # 获取 PORT 环境变量，默认值为 7860（本地开发时使用）
+server_name="0.0.0.0"
 server_port = int(os.getenv("PORT", 7860))
 
 print(f"server_port: {server_port}")
@@ -83,7 +84,7 @@ def launch():
     print(f'launch ...')  # Press ⌘F8 to toggle the breakpoint.
     # 启动应用
     # demo.launch()
-    loadChatDemo.launch(server_port=server_port)
+    loadChatDemo.launch(server_name=server_name, server_port=server_port)
 
 
 # Press the green button in the gutter to run the script.
