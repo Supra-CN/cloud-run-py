@@ -1,0 +1,2 @@
+- 所有未注明 Copyright Owner 以及注明 Copyright Owner Supra Wang <supra.cn@gmail.com> 的文件，受 [LICENSE.fuck](LICENSE.fuck) 协议保护
+- 所有其他注明 Copyright Owner 的文件，受其原始协议保护：[LICENSE](LICENSE)
