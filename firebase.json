@@ -1,10 +1,21 @@
 {
   "hosting": {
+    "target": "cloud-run-py",
     "public": "output/firebase/public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "run": {
+          "serviceId": "cloud-run-py",
+          "region": "us-west1",
+          "pinTag": true
+        }
+      }
     ]
   }
 }

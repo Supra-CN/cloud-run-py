@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "supra-garage"
-  }
+  },
+  "targets": {
+    "supra-garage": {
+      "hosting": {
+        "cloud-run-py": [
+          "cloud-run-py"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
