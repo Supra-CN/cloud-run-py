@@ -31,3 +31,5 @@ __pycache__/
 # dotenv
 .env
 .env.*
+
+output/firebase/public/
